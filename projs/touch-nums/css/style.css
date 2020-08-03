@@ -1,0 +1,100 @@
+body {
+    text-align: center;
+    background-color: teal;
+}
+h1 {
+    color: lightsalmon;
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 2px;
+}
+h2 {
+    color: lightsalmon;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 0;
+    
+}
+h1 span{
+    color: rgb(253, 111, 95);
+}
+
+.timer {
+    width: 310px;
+    height: 200px;
+    background-color: rgb(150, 219, 138);
+    margin: 0 auto;
+    color: rgb(20, 110, 73);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 50px;
+    box-shadow: 5px 5px 10px black;
+    visibility: hidden;
+    
+
+}
+
+.victory {
+    width: 750px;
+    height:250px;
+    background-color: rgb(6, 150, 240);
+    left: 210px;
+    position: absolute;
+    border-radius: 20%;
+    padding: 20px;
+    box-shadow: 5px 5px 10px lightblue;
+    display: none;
+    
+    
+}
+.victory-msg {
+    margin: 0;
+    font-size:55px ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: turquoise;
+    font-weight: bold;
+    text-decoration: underline ;
+    
+}
+
+.victory button{
+    width: 190px;
+    height: 70px;
+    margin: 80px;
+    font-size: 25px;
+    border-radius: 5%;
+}
+
+.victory button:hover{
+    background-color: lightgreen;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: lightskyblue;
+
+
+}
+
+table {
+    margin: 25px auto;
+    width: 420px;
+    height: 530px;
+    font-size: xx-large;
+    border-radius: 8%;
+    border-color:black;
+    border-style: double;
+    padding: 10px;
+    background-color: turquoise;
+    
+}
+
+th{
+    background-color: lightgreen;
+    border-radius: 30%;
+    border-color: black;
+    width: auto;
+    height: 85px;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
