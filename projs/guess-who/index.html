@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>My App</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <header class="box">
+    <img class="rotate-scale-up" src="img/layout/logo.png" />
+    <h1>Guess Who</h1>
+  </header>
+
+  <main class="border-top">
+    <section class="game-start ">
+      <h2 class="mb-5 display-4">Think of Someone...</h2>
+      <button onclick="onStartGuessing()" class="btn btn-lg btn-success shadow-lg p-3 mb-5 rounded">I'm Ready!</button>
+    </section>
+
+    
+    <section class="quest" style="display: none">
+      <div class="card shadow-lg border-primary rounded-pill flip-scale-up-ver" style="width: 30rem;">
+      <div class="card-body">
+        <h2 class="card-title mb-5 display-4"></h2>
+        <button onclick="onUserResponse('yes')" class="btn btn-info btn-lg mr-5">Yes</button>
+        <button onclick="onUserResponse('no')" class="btn btn-danger btn-lg">No</button>
+      </div>
+    </div>
+    </section>
+
+
+    <section class="new-quest" style="display: none">
+      <h2>OK, I gave up...</h2>
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="newGuess" class="col-sm-6 control-label">You thought of: </label>
+          <div class="col-sm-6">
+            <input name="newGuess" type="txt" class="form-control" id="newGuess" placeholder="Your Guess" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="newQuest" class="col-sm-6 control-label">Question to differentiate</label>
+          <div class="col-sm-6">
+            <input name="newQuest" type="txt" class="form-control" id="newQuest" placeholder="The answer is YES for yours"
+              required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" onclick="onAddGuess(); return false;" class="btn btn-secondary">
+              Make me Smarter!
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div class="modal text-center rotate-scale-up" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog text-black-50 shadow-lg">
+      <div class="modal-content font-weight-bold display-4 bg-secondary">
+        <div class="modal-header">
+          <button type="button" class="close text-white" onclick="onCloseModal()" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-light">
+          Yes, I knew it!
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" onclick="onRestartGame()" class="btn btn-primary">Play again!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    cofferight &copy; 2016
+  </footer>
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="js/storage-service.js"></script>
+  <script src="js/quest-service.js"></script>
+  <script src="js/quest-controller.js"></script>
+
+</body>
+
+</html>
